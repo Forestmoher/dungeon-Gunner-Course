@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public static class HelperUtilities
@@ -22,16 +21,16 @@ public static class HelperUtilities
         bool error = false;
         int count = 0;
 
-        foreach(var item in enumerableObjectToCheck)
+        foreach (var item in enumerableObjectToCheck)
         {
-            if(item == null)
+            if (item == null)
             {
                 Debug.Log(fieldName + " has null values in object " + thisObject.name.ToString());
                 error = true;
             }
             else count++;
         }
-        if(count == 0)
+        if (count == 0)
         {
             Debug.Log(fieldName + " has no values in object " + thisObject.name.ToString());
             error = true;
